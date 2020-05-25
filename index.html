@@ -2,43 +2,56 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title></title>
-    <!--<link rel="stylesheet" href="ext/Skeleton-2.0.4/css/normalize.css">
-    <link rel="stylesheet" href="ext/Skeleton-2.0.4/css/skeleton.css">-->
-    <link rel="stylesheet" href="assets/css/theme.css">
+    <link rel="stylesheet" href="ext/bulma-0.8.2/css/bulma.css">
     <link rel="stylesheet" href="ext/fontawesome/css/all.css">
+    <link rel="stylesheet" href="assets/css/theme.css">
   </head>
   <body>
-    <div class="container-fluid">
-      <div class="menu">
-        <div class="container">
-          <h2>Jordan O'Hara</h2>
-          <img class="avatar" src="https://scontent-lhr8-1.cdninstagram.com/v/t51.2885-15/e35/76967175_119485602862021_6630811859221191372_n.jpg?_nc_ht=scontent-lhr8-1.cdninstagram.com&_nc_cat=101&_nc_ohc=DC0LpJdeHcEAX9-fbGa&oh=5aa2e900a3af3952d61c9d84fff86fe6&oe=5EA48EA8" alt="profile picture"></img>
-          <small>Hi, my name is Jordan O'Hara and I'm a Software Engineer. Welcome to my personal website!</small>
-          <ul>
-            <li><a href="index.html"><i class="far fa-user"></i> About</a></li>
-            <li><a href="portfolio.html"><i class="fas fa-laptop"></i> Portfolio</a></li>
-            <li><a href="resume.html"><i class="far fa-file"></i> Resume</a></li>
-            <li><a href="contact.html"><i class="fas fa-envelope-open-text"></i> Contact</a></li>
-          </ul>
-          <ul class="social">
-            <li><a href=""><i class="fab fa-github"></i></a></li>
-            <li><a href=""><i class="fab fa-linkedin"></i></a></li>
-            <li><a href=""><i class="fab fa-stack-overflow"></i></a></li>
-          </ul>
-        </div>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="#">
+          <p>Jordan O'Hara</p>
+        </a>
+
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
       </div>
-      <div class="main">
-        <div class="container">
-          <h1>Jordan O'Hara </h1>
-          <h4>Software Engineering</h4>
-          <br>
-          <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"></img>
+
+        <div id="navbarBasicExample" class="navbar-end">
+          <a class="navbar-item">
+            About
+          </a>
+
+          <a class="navbar-item">
+            Projects
+          </a>
+
+          <a class="navbar-item">
+            Contact Me
+          </a>
         </div>
-        <div class="footer">
-          <p>&copy; 2020 Jordan O'Hara</p>
-        </div>
+    </nav>
+
+    <div class="container" id="info">
+      <figure class="image is-128x128 avatar">
+        <img class="is-rounded" src="https://avatars2.githubusercontent.com/u/59995955?s=460&u=20dacabc01dd35a8d4e559aebfa4a5b12dc32ce1&v=4">
+      </figure>
+      <h1 class="title is-1">Jordan O'Hara</h1>
+      <h4 class="subtitle is-4">Software Engineer</h4>
+      <div class="menu">
+        <ul class="menu-list">
+          <li><a>Github</a></li>
+          <li><a>Twitter</a></li>
+          <li><a>LinkedIn</a></li>
+        </ul>
       </div>
     </div>
+
+    <footer></footer>
   </body>
 </html>
