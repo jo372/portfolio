@@ -1,0 +1,18 @@
+.terminal {
+  background-color:#fff;
+  border:1px solid #222;
+  max-width:300px;
+  width:100%;
+  max-height: 250px;
+  height:100%;
+  position:fixed;
+}
+
+.terminal-cmd {
+  color:#222;
+}
+
+.terminalHeader {
+  background-color: #222;
+  color:#fff;
+}

@@ -1,0 +1,25 @@
+{
+  "name": "portfoliowebsite",
+  "version": "1.0.0",
+  "description": "portfolio website",
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "tslint": "^6.1.3",
+    "typescript": "^4.0.2",
+    "webpack-cli": "^3.3.12"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jo372/portfolioWebsite.git"
+  },
+  "author": "Jordan O'Hara",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jo372/portfolioWebsite/issues"
+  },
+  "homepage": "https://github.com/jo372/portfolioWebsite#readme"
+}

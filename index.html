@@ -1,28 +1,30 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title></title>
     <link rel="stylesheet" href="ext/bulma-0.8.2/css/bulma.css">
     <link rel="stylesheet" href="ext/fontawesome/css/all.css">
-    <link rel="stylesheet" href="assets/css/theme.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/terminal.css">
   </head>
   <body>
+
     <nav class="navbar" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
         <a class="navbar-item" href="#">
           <p>Jordan O'Hara</p>
         </a>
 
-        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
         </a>
       </div>
 
-        <div id="navbarBasicExample" class="navbar-end">
+        <div id="navbarMenu" class="navbar-end">
           <a class="navbar-item">
             About
           </a>
@@ -53,5 +55,16 @@
     </div>
 
     <footer></footer>
+
+    <div class="fullscreen_background" id="particlesjs"></div>
+
+    <script src="./ext/particles.js/particles.js"></script>
+    <script>
+      particlesJS.load('particlesjs', './particlesjs-config.json', function() {
+        console.log('callback - particles.js config loaded');
+      });
+    </script>
+    <!-- <script src="./dist/terminal.js"></script> -->
+    <!-- <script src="./dist/init.js"></script> -->
   </body>
 </html>

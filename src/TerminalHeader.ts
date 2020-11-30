@@ -1,5 +1,12 @@
 import {BaseElement} from "./BaseElement";
-import {TerminalCSSSelector} from "./Terminal";
+import {TerminalCSSSelector} from "./TerminalCSSSelector";
+
+export interface TerminalHeaderConfig {
+    title?: string;
+    canClose?: boolean;
+    canMaximize?: boolean;
+    canMinimize?: boolean;
+}
 
 export class TerminalHeader extends BaseElement {
     constructor(config?: TerminalHeaderConfig) {
