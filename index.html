@@ -4,54 +4,56 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title></title>
-    <link rel="stylesheet" href="ext/bulma-0.8.2/css/bulma.css">
     <link rel="stylesheet" href="ext/fontawesome/css/all.css">
+    <link rel="stylesheet" href="./ext/bootstrap-4.5.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/theme.css">
-    <link rel="stylesheet" href="css/terminal.css">
   </head>
   <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Jordan O'Hara</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-      <div class="navbar-brand">
-        <a class="navbar-item" href="#">
-          <p>Jordan O'Hara</p>
-        </a>
-
-        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </a>
-      </div>
-
-        <div id="navbarMenu" class="navbar-end">
-          <a class="navbar-item">
-            About
-          </a>
-
-          <a class="navbar-item">
-            Projects
-          </a>
-
-          <a class="navbar-item">
-            Contact Me
-          </a>
-        </div>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact Me</a>
+        </li>
+      </ul>
+    </div>
     </nav>
 
-    <div class="container" id="info">
-      <figure class="image is-128x128 avatar">
-        <img class="is-rounded" src="https://avatars2.githubusercontent.com/u/59995955?s=460&u=20dacabc01dd35a8d4e559aebfa4a5b12dc32ce1&v=4">
-      </figure>
-      <h1 class="title is-1">Jordan O'Hara</h1>
-      <h4 class="subtitle is-4">Software Engineer</h4>
-      <div class="menu">
-        <ul class="menu-list">
-          <li><a>Github</a></li>
-          <li><a>Twitter</a></li>
-          <li><a>LinkedIn</a></li>
-        </ul>
-      </div>
+    <div class="container info">
+            <img class="img-thumbnail mx-auto d-block avatar" src="https://avatars2.githubusercontent.com/u/59995955?s=460&u=20dacabc01dd35a8d4e559aebfa4a5b12dc32ce1&v=4">
+
+            <h1 class="display-4">Jordan O'Hara</h1>
+            <h3>Software Engineer</h3>
+
+            <ul class="socials-list">
+                <li><a href=""><i class="fab fa-github"></i></a></li>
+                <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                <li><a href=""><i class="fab fa-linkedin"></i></a></li>
+            </ul>
+
+<!--            <h1 class="title is-1">Jordan O'Hara</h1>-->
+<!--            <h4 class="subtitle is-4">Software Engineer</h4>-->
+<!--            <div class="menu">-->
+<!--                <ul class="menu-list">-->
+<!--                    <li><a>Github</a></li>-->
+<!--                    <li><a>Twitter</a></li>-->
+<!--                    <li><a>LinkedIn</a></li>-->
+<!--                </ul>-->
+<!--            </div>-->
     </div>
 
     <footer></footer>
@@ -59,6 +61,10 @@
     <div class="fullscreen_background" id="particlesjs"></div>
 
     <script src="./ext/particles.js/particles.js"></script>
+    <script src="./ext/jquery-3.0/jquery-3.0.0.slim.js"></script>
+    <script src="./ext/popperjs/popper.min.js"></script>
+    <script src="./ext/bootstrap-4.5.3/js/bootstrap.min.js"></script>
+
     <script>
       particlesJS.load('particlesjs', './particlesjs-config.json', function() {
         console.log('callback - particles.js config loaded');
