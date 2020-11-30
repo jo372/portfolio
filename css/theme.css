@@ -1,57 +1,58 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap');
 
-html, body {
-  overflow: auto !important;
-}
-body {
-  background-color:transparent;
-}
 
-.fullscreen_background {
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  z-index:-1;
+body, html {
+  min-width: 200px;
 }
-
-.navbar {
-  border-bottom: 1px solid #ccc;
-  font-family: 'Montserrat', sans-serif;
-  text-transform: uppercase;
-}
-
 .avatar {
-  display:block;
-  margin:0 auto;
-  margin-top:100px;
-  margin-bottom:20px;
+  border-radius: 100%;
 }
 
-#info {
+.info {
   text-align: center;
 }
 
-#info .menu .menu-list li{
-  display:inline-block;
-  text-transform: uppercase;
-  font-weight: bold;
+.navbar {
+  margin-bottom: 20px;
 }
 
-#navbarMenu {
-  display:block;
+.socials-list {
+  list-style: none;
+  text-align: center;
+  margin-top:20px;
+  padding-left:0;
 }
 
-
-@media screen and (min-width: 769px) {
-    #navbarMenu {
-      display:none;
-    }
-    #navbarMenu.is-active {
-      display:block;
-    }
-
+.socials-list li {
+  display: inline-block;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
-  /*@media screen and (min-width: 1024px) and (max-width: 1167px) {}*/
+.socials-list i {
+  font-size: 2em;
+}
+
+.socials-list a {
+  color:#222222;
+}
+
+.socials-list a:hover {
+  color:#005cbf;
+}
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { }
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {  }
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .avatar {
+    width:200px;
+    height: 200px;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { }
