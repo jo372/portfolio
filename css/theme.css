@@ -72,6 +72,17 @@ body, html {
   background-color:var(--project-background-color);
 }
 
+.project:hover {
+  transition: 0.2s;
+  -moz-transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  background-color: var(--dark-grey);
+  color: var(--white);
+  border-color: var(--dark-grey);
+  cursor:pointer;
+}
+
 .project a {
   display:block;
   margin-top: 10px;
