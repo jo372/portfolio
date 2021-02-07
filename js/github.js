@@ -73,12 +73,13 @@ $(document).ready(function(){
             dataType: 'json',
             timeout: 500,
             success: function(data, status, xhr) {
-                data = Array.from(data);
-
-                const filteredNames = ['jo372']; // Personal repo that provides README.md info
-                let projectCount = 1;
+                /** prefiltering the array before rendering the divs to the screen! */
+                data = Array.from(data).filter((data) => data['fork'] == false && data['name'].toLowerCase() != 'jo372');
+                
+                let projectCount = 0;
                 let row = createRow();
-
+                let project = null;
+                /** making sure we add +1, to make sure the rows & columns are created correctly. */
                 for(let i=0; i < data.length + 1; i++) {
                     if(projectCount % 2 == 0) {
                         projectsList.appendChild(row);
@@ -86,13 +87,9 @@ $(document).ready(function(){
                     }
 
                     if(i < data.length) {
-                        const project = new Project(data[i]);
-                    
-                        /** filtering out forked projects, just because it's forked doesn't mean I've worked on it... and defininitely do not want my person README.md */
-                        if(project.isForked() == false && filteredNames.includes(project.getName().toLowerCase()) == false) {
-                            row.appendChild(project.getNode());
-                            projectCount++;
-                        }
+                        project = new Project(data[i]);
+                        row.appendChild(project.getNode());
+                        projectCount++;
                     }
                     
                 }
