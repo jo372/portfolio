@@ -2,12 +2,12 @@
   --dark-grey: #222;
   --blue-socials-hover: #005cbf;
   --white: #fff;
-  --project-background-color: #f4f4f4;
+  --project-background-color: #eeeeeeb5;
   --project-border-color: #b7b3b3;
 }
 
 body, html {
-  min-width: 200px;
+  margin: 0;
 }
 
 .avatar {
@@ -32,8 +32,8 @@ body, html {
 .socials-list {
   list-style: none;
   text-align: center;
-  margin-top:20px;
-  padding-left:0;
+  margin-top: 20px;
+  padding-left: 0;
 }
 
 .socials-list li {
@@ -55,14 +55,39 @@ body, html {
 }
 
 #particlesjs {
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  z-index:-1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
+.project {
+  border:1px solid var(--project-border-color);
+  border-radius: 5px;
+  margin-right: 5px;
+  margin-left: 5px;
+  margin-top: 10px;
+  background-color:var(--project-background-color);
+}
+
+.project a {
+  display:block;
+  margin-top: 10px;
+  font-size: 1.1em;
+}
+
+.project span {
+  font-size: 0.7em;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.project p {
+  margin-bottom: 10px;
+  font-size: 0.8em;
+}
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) { }
@@ -73,7 +98,7 @@ body, html {
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
   .avatar {
-    width:200px;
+    width: 200px;
     height: 200px;
   }
   
@@ -87,32 +112,6 @@ body, html {
   
 }
 
-
-
-.project {
-  border:1px solid var(--project-border-color);
-  border-radius: 5px;
-  margin-right:10px;
-  margin-top:10px;
-  background-color:var(--project-background-color);
-}
-
-.project a {
-  display:block;
-  margin-top:10px;
-  font-size: 1.1em;
-}
-
-.project span {
-  font-size:0.7em;
-  display:block;
-  margin-bottom:10px;
-}
-
-.project p {
-  margin-bottom:10px;
-  font-size: 0.8em;
-}
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) { }
