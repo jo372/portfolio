@@ -112,6 +112,26 @@ body, html {
   font-size: 0.8em;
 }
 
+.hidden {
+  display:none;
+}
+
+.show {
+  display: inherit;
+}
+
+.loadingScreen {
+  position: fixed;
+  top:0;
+  left:0;
+  background-color: var(--white);
+  width:100%;
+  height: 100vh;
+  z-index:1;
+  padding-top:10px;
+}
+
+
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) { }
 
