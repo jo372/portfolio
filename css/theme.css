@@ -1,160 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500&display=swap');
+
 :root {
-  --dark-grey: #222;
-  --blue-socials-hover: #005cbf;
-  --white: #fff;
-  --project-background-color: #eeeeeeb5;
-  --project-border-color: #b7b3b3;
+    --white: #fff;
+    --transparent-white: #fffff7fa;
+    --overlay-color: #0000006b;
+    --light-blue: #007bff;
+    --profile-img-background: #ffffff9e;
+    --dark-grey: #222;
 }
 
 body, html {
-  margin: 0;
+    width:100%;
+    height:100%; 
+    padding:0;
+    margin:0;
+    font-family: 'Poppins', sans-serif;
+    min-width: 320px;
 }
 
-.avatar {
-  border-radius: 100%;
+.responsive-video {
+    width:100%;
+    object-fit: cover;
+    object-position: top;
 }
 
-#info {
-  text-align: center;
+.name {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -100%);
+}
+
+.overlay {
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color: var(--overlay-color, #00000038);
+}
+
+div, section {
+    position: relative;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+.click-through {
+    pointer-events: none;
+}
+
+#video-header {
+    color: var(--white, #fff);
+    position: relative;
+}
+
+.fullscreen-container {
+    width:100%;
+    height:100vh;
+    /* height:692px; */
+    display:block;
+}
+
+.fullscreen-container .overlay {
+    height:100vh;
+}
+
+.fullscreen-container .responsive-video {
+    height:100vh;
+}
+
+#intro {
+    width:90%;
+    margin:0 auto;
+    text-align: center;
+    word-break: break-word;
+    padding-top:20rem;
+}
+
+#intro h1 {
+    font-size: 2em;
+}
+
+#intro ul {
+    padding-left:0;
+    font-size:1.5em;
+    color: var(--light-blue, #007bff);
+}
+
+#intro ul li {
+    display:inline-block;
+    margin-top:20px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+.light-blue {
+    background-color: var(--light-blue, #007bff);
 }
 
 .navbar {
-  margin-bottom: 20px;
+    font-weight: 300;
 }
 
-.navbar .nav-item .nav-link:hover {
-  transition: 0.2s;
-  -o-transition: 0.2s;
-  -moz-transition: 0.2s;
-  -webkit-transition: 0.2s;
-}
-
-.socials-list {
-  list-style: none;
-  text-align: center;
-  margin-top: 20px;
-  padding-left: 0;
-}
-
-.socials-list li {
-  display: inline-block;
-  padding-left: 10px;
-  padding-right: 10px;
-  transition: 0.2s;
-  -moz-transition: 0.2s;
-  -webkit-transition: 0.2s;
-  -o-transition: 0.2s;
-}
-
-.socials-list li:hover {
-  transform: scaleX(-1);
-  -webkit-transform: scaleX(-1);
-  -ms-transform: scaleX(-1);
-  -o-transform: scaleX(-1);
-  -moz-transform: scaleX(-1);
-}
-
-.socials-list i {
-  font-size: 2em;
-}
-
-.socials-list a {
-  color: var(--dark-grey);
-}
-
-.socials-list a:hover {
-  color: var(--blue-socials-hover);
-}
-
-#particlesjs {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
-
-.project {
-  border:1px solid var(--project-border-color);
-  border-radius: 5px;
-  margin-right: 5px;
-  margin-left: 5px;
-  margin-top: 10px;
-  background-color:var(--project-background-color);
-}
-
-.project:hover {
-  transition: 0.2s;
-  -moz-transition: 0.2s;
-  -webkit-transition: 0.2s;
-  -o-transition: 0.2s;
-  background-color: var(--dark-grey);
-  color: var(--white);
-  border-color: var(--dark-grey);
-  cursor:pointer;
-}
-
-.project a {
-  display:block;
-  margin-top: 10px;
-  font-size: 1.1em;
-}
-
-.project span {
-  font-size: 0.7em;
-  display: block;
-  margin-bottom: 10px;
-}
-
-.project p {
-  margin-bottom: 10px;
-  font-size: 0.8em;
-}
-
-.hidden {
-  display:none;
-}
-
-.show {
-  display: inherit;
-}
-
-.loadingScreen {
-  position: fixed;
-  top:0;
-  left:0;
-  background-color: var(--white);
-  width:100%;
-  height: 100vh;
-  z-index:1;
-  padding-top:10px;
+.white {
+    background-color: var(--transparent-white, #fffff7fa);
 }
 
 
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) { }
+.profile-img {
+    --size: 250px;
+    width:var(--size, 250px);
+    height:var(--size, 250px);
+    border-radius: 100%;
+    border:5px solid var(--white, #fff);
+    background-color: var(--profile-img-background, #ffffff9e);
+    position: absolute;
+    top: calc((100% - var(--size, 250px)) / 2);
+    left: calc((100% - var(--size, 250px)) / 2);
+}
 
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {  }
+#about-me {
+    color:var(--white, #fff);
+}
 
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-  .avatar {
-    width: 200px;
-    height: 200px;
-  }
+.rightSidePanel {
+    position:fixed;
+    top:45%;
+    right:0;
+    list-style: none;
+    z-index:1;
+    margin-right:10px;
+}
+
+.rightSidePanel li a {
+    position: absolute;
+    width:100%;
+    height:100%;
+    text-decoration: none;
+}
+
+.rightSidePanel li {
+    width:10px;
+    height:10px;
+    background-color:var(--white, #fff);
+    border: 1px solid var(--light-blue, #007bff);
+    border-radius: 100%;
+    margin-top:10px;
+    cursor: pointer;
+    position: relative;
+}
+
+.rightSidePanel li.active {
+    background-color: var(--light-blue, #007bff);
+    border-color: var(--white, #fff);
+}
+
+.rightSidePanel li:hover {
+    transition: 0.2s;
+    -moz-transition: 0.2s;
+    -o-transition: 0.2s;
+    -webkit-transition: 0.2s;
+    background-color: var(--light-blue, #007bff);
+    border-color: var(--white, #fff);
+}
+
+
+
+
+/* .typewriter h1 {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    /* border-right: .15em solid var(--light-blue, #007bff); The typwriter cursor */
+    /* white-space: nowrap; Keeps the content on a single line */
+    /* margin: 0 auto; Gives that scrolling effect as the typing happens */
+    /* letter-spacing: .15em; Adjust as needed */
+    /* animation:  */
+      /* typing 3.5s steps(40, end), */
+      /* blink-caret .75s step-end infinite; */
+  /* } */ */
+
   
-  .navbar {
-    padding-top: 0;
-  }
-
-  .navbar .nav-item .nav-link { 
-    padding: 10px;
-  }
+/* The typing effect */
+/* @keyframes typing { */
+    /* from { width: 0 } */
+    /* to { width: 100% } */
+/* } */
   
-}
-
-
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) { }
+/* The typewriter cursor effect */
+/* @keyframes blink-caret { */
+    /* from, to { border-color: transparent } */
+    /* 50% { border-color: var(--light-blue, #007bff); } */
+/* } */
