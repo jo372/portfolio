@@ -10,8 +10,9 @@ class Video {
     public element : HTMLVideoElement;
     private playIcon: HTMLElement;
 
-    constructor(src: string, config?: VideoConfiguration) {
+    constructor(src: string, posterSrc?: string, config?: VideoConfiguration) {
         config = { ...defaultVideoConfiguration, ...config};
+        posterSrc = posterSrc || '';
         this.videoStatus = config.isPlaying ? VideoStatus.PLAYING : VideoStatus.PAUSED;
         
         let playIcon = document.createElement('i');
@@ -20,6 +21,7 @@ class Video {
         let videoElement : HTMLVideoElement = document.createElement('video');
             videoElement.src = src;
             videoElement.loop = config.isLooping;
+            videoElement.poster = posterSrc;
             videoElement.autoplay = config.isPlaying;
             videoElement.classList.add('responsive-video');
             this.addEventListenersTo(videoElement);
