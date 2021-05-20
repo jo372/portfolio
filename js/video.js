@@ -14,14 +14,16 @@ var defaultVideoConfiguration = {
     isPlaying: true
 };
 var Video = /** @class */ (function () {
-    function Video(src, config) {
+    function Video(src, posterSrc, config) {
         config = __assign({}, defaultVideoConfiguration, config);
+        posterSrc = posterSrc || '';
         this.videoStatus = config.isPlaying ? VideoStatus.PLAYING : VideoStatus.PAUSED;
         var playIcon = document.createElement('i');
         this.playIcon = playIcon;
         var videoElement = document.createElement('video');
         videoElement.src = src;
         videoElement.loop = config.isLooping;
+        videoElement.poster = posterSrc;
         videoElement.autoplay = config.isPlaying;
         videoElement.classList.add('responsive-video');
         this.addEventListenersTo(videoElement);
