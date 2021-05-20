@@ -1,0 +1,160 @@
+:root {
+  --dark-grey: #222;
+  --blue-socials-hover: #005cbf;
+  --white: #fff;
+  --project-background-color: #eeeeeeb5;
+  --project-border-color: #b7b3b3;
+}
+
+body, html {
+  margin: 0;
+}
+
+.avatar {
+  border-radius: 100%;
+}
+
+#info {
+  text-align: center;
+}
+
+.navbar {
+  margin-bottom: 20px;
+}
+
+.navbar .nav-item .nav-link:hover {
+  transition: 0.2s;
+  -o-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -webkit-transition: 0.2s;
+}
+
+.socials-list {
+  list-style: none;
+  text-align: center;
+  margin-top: 20px;
+  padding-left: 0;
+}
+
+.socials-list li {
+  display: inline-block;
+  padding-left: 10px;
+  padding-right: 10px;
+  transition: 0.2s;
+  -moz-transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+}
+
+.socials-list li:hover {
+  transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -moz-transform: scaleX(-1);
+}
+
+.socials-list i {
+  font-size: 2em;
+}
+
+.socials-list a {
+  color: var(--dark-grey);
+}
+
+.socials-list a:hover {
+  color: var(--blue-socials-hover);
+}
+
+#particlesjs {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.project {
+  border:1px solid var(--project-border-color);
+  border-radius: 5px;
+  margin-right: 5px;
+  margin-left: 5px;
+  margin-top: 10px;
+  background-color:var(--project-background-color);
+}
+
+.project:hover {
+  transition: 0.2s;
+  -moz-transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  background-color: var(--dark-grey);
+  color: var(--white);
+  border-color: var(--dark-grey);
+  cursor:pointer;
+}
+
+.project a {
+  display:block;
+  margin-top: 10px;
+  font-size: 1.1em;
+}
+
+.project span {
+  font-size: 0.7em;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.project p {
+  margin-bottom: 10px;
+  font-size: 0.8em;
+}
+
+.hidden {
+  display:none;
+}
+
+.show {
+  display: inherit;
+}
+
+.loadingScreen {
+  position: fixed;
+  top:0;
+  left:0;
+  background-color: var(--white);
+  width:100%;
+  height: 100vh;
+  z-index:1;
+  padding-top:10px;
+}
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { }
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {  }
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .avatar {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .navbar {
+    padding-top: 0;
+  }
+
+  .navbar .nav-item .nav-link { 
+    padding: 10px;
+  }
+  
+}
+
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { }

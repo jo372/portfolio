@@ -1,0 +1,22 @@
+.name {
+    padding-top:20%;
+}
+
+#intro nav {
+    position:absolute;
+    left:0;
+    top:22rem;
+}
+
+#intro .container {
+    width:90%;
+}
+
+#intro ul li {
+    display:block;
+    margin-top:10px;
+}
+
+#intro {
+    padding-top: 25rem;
+}
