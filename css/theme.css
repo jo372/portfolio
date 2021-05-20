@@ -55,7 +55,11 @@ div, section {
 
 #video-header {
     color: var(--white, #fff);
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .fullscreen-container {
@@ -78,7 +82,7 @@ div, section {
     margin:0 auto;
     text-align: center;
     word-break: break-word;
-    padding-top:18rem;
+    padding-top:10rem;
 }
 
 #intro h1 {

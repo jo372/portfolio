@@ -5,7 +5,7 @@
 #intro nav {
     position:absolute;
     left:0;
-    top:16rem;
+    top:14.5rem;
 }
 
 #intro .container {
@@ -18,5 +18,5 @@
 }
 
 #intro {
-    padding-top: 20rem;
+    padding-top: 18rem;
 }
