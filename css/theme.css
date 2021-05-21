@@ -64,7 +64,7 @@ div, section {
 
 .fullscreen-container {
     width:100%;
-    height:100vh;
+    min-height:100vh;
     /* height:692px; */
     display:block;
 }
@@ -82,7 +82,7 @@ div, section {
     margin:0 auto;
     text-align: center;
     word-break: break-word;
-    padding-top:10rem;
+    padding-top:6rem;
 }
 
 #intro h1 {
@@ -125,12 +125,17 @@ nav ul {
     border:5px solid var(--white, #fff);
     background-color: var(--profile-img-background, #ffffff9e);
     position: absolute;
-    top: calc((100% - var(--size, 250px)) / 2);
+    top: -138px;
     left: calc((100% - var(--size, 250px)) / 2);
 }
 
 #about-me {
     color:var(--white, #fff);
+    text-align: center;
+}
+
+#about-me .col:first-of-type {
+    padding-top:140px;
 }
 
 .rightSidePanel {
@@ -174,7 +179,10 @@ nav ul {
     border-color: var(--white, #fff);
 }
 
-
+#about-me {
+    padding-top:20px;
+    padding-bottom:20px;
+}
 
 
 /* .typewriter h1 {
