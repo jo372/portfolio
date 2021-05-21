@@ -18,7 +18,7 @@ if(sideNav) {
                         if(el) {
                             el.scrollIntoView({
                                 behavior: 'smooth', 
-                                block: 'center'
+                                block: 'start'
                             });
                         }
                         let previousSelectedElement : HTMLLIElement | null = sideNav.querySelector('li.active');
