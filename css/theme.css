@@ -126,7 +126,8 @@ ul {
     background-color: var(--profile-img-background, #ffffff9e);
     position: absolute;
     top: -138px;
-    left: calc(100% - var(--size, 250px) / 2);
+    left: 50%;
+    transform: translate(-50%);
 }
 
 
