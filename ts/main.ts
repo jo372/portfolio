@@ -34,11 +34,13 @@ if(body) {
     let introTextSection : HTMLElement | null = document.getElementById('intro-text');
     
     if(introTextSection) {
+        /** creating the container which the text typer will writing into and appending into the parent element. */
         let container : HTMLElement = document.createElement('h1');
             container.classList.add('text-cursor');
         introTextSection.append(container);
 
         const typer : TextTyper = new TextTyper(container, 30, 100);
+        /** the html string that will be written after they text typer has finished. */
         let htmlString : string = "Hello, I am <span><a href=\"https://www.linkedin.com/in/jordan-o-hara-875b841a9/\" target=\"_blank\">Jordan O'Hara</a></span>. A Fulltime Software Engineering Student @ Brighton University";
 
         typer
