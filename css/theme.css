@@ -126,7 +126,7 @@ ul {
     background-color: var(--profile-img-background, #ffffff9e);
     position: absolute;
     top: -138px;
-    left: calc((100% - var(--size, 250px)) / 2);
+    left: calc(100% - var(--size, 250px) / 2);
 }
 
 
@@ -137,6 +137,7 @@ ul {
     list-style: none;
     z-index: 1;
     margin-right: 10px;
+    color:transparent;
 }
 
 .rightSidePanel a {
