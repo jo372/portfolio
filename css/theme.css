@@ -9,6 +9,7 @@
     --profile-img-background: #ffffff9e;
     --dark-grey: #222;
     --black: #000;
+    --red: #ff0000;
 }
 
 /** Native Elements */
@@ -40,12 +41,6 @@ section {
     margin-top: 20px;
 }
 
-
-footer {
-    text-align: center;
-    margin-top:20px;
-}
-
 ul {
     padding:0;
 }
@@ -70,10 +65,6 @@ ul {
     width: 100%;
     height: 100%;
     background-color: var(--overlay-color, #00000038);
-}
-
-.text-align-center {
-    text-align: center;
 }
 
 .click-through {
@@ -117,11 +108,11 @@ ul {
 }
 
 .light-blue a {
-    color: #fff;
+    color: var(--white, #fff);
 }
 
 .red {
-    color: red;
+    color: var(--red, red);
 }
 
 
@@ -239,14 +230,15 @@ ul {
 */
 
 /** Video Header Section */
+
 #video-header {
-    color: var(--white, #fff);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    width:100%;
 }
+
+#video-header .overlay {
+    color: var(--white, #fff);
+}
+
 
 /** Resume Section */
 #resume {
@@ -426,4 +418,8 @@ ul {
 .go-to-top:hover {
     background-color: var(--light-blue, #007bff);
     color: var(--white, #fff);
+}
+
+.video-credit {
+    padding-top:10px;
 }
