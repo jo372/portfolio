@@ -1,15 +1,17 @@
 let body = document.body;
 if (body) {
+    /** setting up scroll into view for the navbar */
     let navbar = document.querySelector('.navbar');
     if (navbar) {
         let navElements = navbar.querySelectorAll('a.nav-link');
         navElements.forEach((navElement) => {
             navElement.addEventListener('click', (e) => {
-                e.preventDefault();
                 let hrefId = navElement.hash;
                 if (hrefId !== "") {
                     let el = document.querySelector(hrefId);
                     if (el) {
+                        /** prevent default click only if the element exists, otherwise it will default. */
+                        e.preventDefault();
                         el.scrollIntoView({
                             behavior: 'smooth',
                             block: 'start'
@@ -19,49 +21,25 @@ if (body) {
             });
         });
     }
-    // let anchorElement : HTMLAnchorElement | null = listItem.querySelector('a');
-    // if(anchorElement) {
-    //     anchorElement.addEventListener('click', (e: Event) => { 
-    //         e.preventDefault();
-    //         return false; 
-    //     });
-    //     let hrefId : string = anchorElement.hash;
-    //     listItem.addEventListener('click', function(e: Event) {
-    //         e.preventDefault();
-    //         if(hrefId !== "") {
-    //             let el : HTMLElement | null = document.querySelector(hrefId);
-    //             if(el) {
-    //                 el.scrollIntoView({
-    //                     behavior: 'smooth', 
-    //                     block: 'start'
-    //                 });
-    //             }
-    //             let previousSelectedElement : HTMLLIElement | null = sideNav.querySelector('li.active');
-    //                 if(previousSelectedElement) {
-    //                     previousSelectedElement.classList.toggle('active');
-    //                 }
-    //             listItem.classList.add('active');
-    //         }
-    //     });
-    // }
+    /** creating custom video element. */
     let videoHeader = document.getElementById('video-header');
     if (videoHeader) {
         const video = new Video("assets/video/pexels-tea-oebel-6804114.mp4", "assets/img/video-poster.png");
         videoHeader.append(video.element);
     }
+    /** hiding the socials until word typing has been completed. */
     let socials = document.getElementById('socials');
     if (socials) {
         socials.classList.add('hide');
     }
+    /** starting the text typer */
     let introTextSection = document.getElementById('intro-text');
     if (introTextSection) {
         let container = document.createElement('h1');
         container.classList.add('text-cursor');
         introTextSection.append(container);
         const typer = new TextTyper(container, 30, 100);
-        // minTypingTime?: number, randomTypingTime
         let htmlString = "Hello, I am <span><a href=\"https://www.linkedin.com/in/jordan-o-hara-875b841a9/\" target=\"_blank\">Jordan O'Hara</a></span>. A Fulltime Software Engineering Student @ Brighton University";
-        // let textToType : string = "Hello, I am Jordan O'Hara. I'm a fulltime Software Engineering Student @ Brighton University";
         typer
             .clearNow()
             .wait(1000)
@@ -83,6 +61,30 @@ if (body) {
             .chain(() => {
             if (!container.classList.contains('no-animation')) {
                 container.classList.add('no-animation');
+            }
+        });
+    }
+    /** adding scroll into view to go-to-top */
+    let goToTop = document.querySelector('.go-to-top');
+    /** if the element exists add click event  */
+    if (goToTop) {
+        goToTop.addEventListener('click', (e) => {
+            /** getting the target element  */
+            let target = e.target;
+            /** if there is a target get the hash, prevent default and scroll into view. */
+            if (target) {
+                let hrefId = target.parentElement.hash;
+                if (hrefId != "") {
+                    let el = document.querySelector(hrefId);
+                    if (el) {
+                        /** prevent default click only if the element exists, otherwise it will default. */
+                        e.preventDefault();
+                        el.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                }
             }
         });
     }
