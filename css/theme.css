@@ -11,39 +11,55 @@
     --black: #000;
 }
 
-body, html {
-    width:100%;
-    height:100%; 
-    padding:0;
-    margin:0;
+/** Native Elements */
+body,
+html {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
     font-family: 'Poppins', sans-serif;
     min-width: 320px;
 }
 
+div,
+section {
+    position: relative;
+}
+
+nav ul {
+    list-style: none;
+}
+
+p,
+li {
+    font-weight: 300;
+}
+
+section {
+    margin-top: 20px;
+}
+
 .responsive-video {
-    width:100%;
+    width: 100%;
     object-fit: cover;
     object-position: top;
 }
 
 .name {
     position: absolute;
-    top:50%;
-    left:50%;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -100%);
 }
 
 .overlay {
     position: absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-color: var(--overlay-color, #00000038);
-}
-
-div, section {
-    position: relative;
 }
 
 .text-align-center {
@@ -54,59 +70,36 @@ div, section {
     pointer-events: none;
 }
 
-#video-header {
-    color: var(--white, #fff);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
 .fullscreen-container {
-    width:100%;
-    min-height:100vh;
+    width: 100%;
+    min-height: 100vh;
     /* height:692px; */
 
-    margin-top:20px;
-    margin-bottom:20px;
-    display:block;
+    /* margin-top:20px; */
+    /* margin-bottom:20px; */
+    display: block;
     position: relative;
 }
 
 .fullscreen-container .overlay {
-    height:100vh;
+    height: 100vh;
 }
 
 .fullscreen-container .responsive-video {
-    height:100vh;
+    height: 100vh;
 }
 
-#intro {
-    width:90%;
-    margin:0 auto;
-    text-align: center;
-    word-break: break-word;
-    padding-top:6rem;
+
+
+
+
+.navbar {
+    font-weight: 300;
 }
 
-#intro h1 {
-    font-size: 2em;
-}
-
-#intro ul {
-    padding-left:0;
-    font-size:1.5em;
-    color: var(--light-blue, #007bff);
-}
-
-#intro ul li {
-    display:inline-block;
-    margin-top:20px;
-}
-
-nav ul {
-    list-style: none;
+/** Colours Section */
+.white {
+    background-color: var(--transparent-white, #fffff7fa);
 }
 
 .light-blue {
@@ -114,63 +107,51 @@ nav ul {
 }
 
 .light-blue a {
-    color:#fff;
+    color: #fff;
 }
 
-.navbar {
-    font-weight: 300;
-}
-
-.white {
-    background-color: var(--transparent-white, #fffff7fa);
+.red {
+    color: red;
 }
 
 
 
 .profile-img {
     --size: 250px;
-    width:var(--size, 250px);
-    height:var(--size, 250px);
+    width: var(--size, 250px);
+    height: var(--size, 250px);
     border-radius: 100%;
-    border:5px solid var(--white, #fff);
+    border: 5px solid var(--white, #fff);
     background-color: var(--profile-img-background, #ffffff9e);
     position: absolute;
     top: -138px;
     left: calc((100% - var(--size, 250px)) / 2);
 }
 
-#about-me {
-    color:var(--white, #fff);
-    text-align: center;
-}
-
-#about-me .col:first-of-type {
-    padding-top:140px;
-}
 
 .rightSidePanel {
-    position:fixed;
-    top:45%;
-    right:0;
+    position: fixed;
+    top: 45%;
+    right: 0;
     list-style: none;
-    z-index:1;
-    margin-right:10px;
+    z-index: 1;
+    margin-right: 10px;
 }
 
 .rightSidePanel li a {
     position: absolute;
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 100%;
     text-decoration: none;
 }
 
 .rightSidePanel li {
-    width:10px;
-    height:10px;
-    background-color:var(--white, #fff);
+    width: 10px;
+    height: 10px;
+    background-color: var(--white, #fff);
     border: 1px solid var(--light-blue, #007bff);
     border-radius: 100%;
-    margin-top:10px;
+    margin-top: 10px;
     cursor: pointer;
     position: relative;
 }
@@ -189,45 +170,43 @@ nav ul {
     border-color: var(--white, #fff);
 }
 
-p, li {
-    font-weight: 300;
-}
-
 .bold {
     font-weight: bold;
 }
 
 .no-padding {
-    padding:0;
+    padding: 0;
 }
 
 .no-margin {
-    margin:0;
-}
-#resume {
-    text-align: center;
+    margin: 0;
 }
 
+
+/** Button Class */
 .button {
-    border:1px solid var(--black, #000);
-    display:block;
+    border: 1px solid var(--black, #000);
+    display: block;
     text-align: center;
-    padding:10px;
-    margin:10px;
+    padding: 10px;
+    margin: 10px;
     cursor: pointer;
     font-weight: 300;
     text-transform: uppercase;
-    width:100%;
-    transition:0.2s;
-    -o-transition:0.2s;
-    -webkit-transition:0.2s;
+    width: 100%;
+    transition: 0.2s;
+    -o-transition: 0.2s;
+    -webkit-transition: 0.2s;
     -moz-transition: 0.2s;
+}
+
+.button:hover {
     text-decoration: none;
 }
 
 .button i {
-    padding-left:10px;
-    padding-right:10px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .button.blue {
@@ -235,35 +214,96 @@ p, li {
     color: var(--light-blue, #007bff);
 }
 
-.button:hover.blue {
-    background-color:var(--light-blue, #007bff);
-    color:var(--white, #fff);
+.button.blue:hover {
+    background-color: var(--light-blue, #007bff);
+    color: var(--white, #fff);
+}
+
+
+
+/** 
+
+    ID Section
+
+*/
+
+/** Video Header Section */
+#video-header {
+    color: var(--white, #fff);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/** Resume Section */
+#resume {
+    text-align: center;
+}
+
+/** About Me Section */
+#about-me {
+    color: var(--white, #fff);
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+#about-me .col:first-of-type {
+    padding-top: 140px;
+}
+
+/** Introduction Section */
+#intro {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    word-break: break-word;
+    padding-top: 6rem;
+}
+
+#intro h1 {
+    font-size: 2em;
+}
+
+#intro ul {
+    padding-left: 0;
+    font-size: 1.5em;
+    color: var(--light-blue, #007bff);
+}
+
+#intro ul li {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+#intro a:visited {
+    text-decoration: none;
+    color: var(--light-blue, #007bff);
 }
 
 
 footer {
     text-align: center;
 }
-/* .typewriter h1 {
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    /* border-right: .15em solid var(--light-blue, #007bff); The typwriter cursor */
-    /* white-space: nowrap; Keeps the content on a single line */
-    /* margin: 0 auto; Gives that scrolling effect as the typing happens */
-    /* letter-spacing: .15em; Adjust as needed */
-    /* animation:  */
-      /* typing 3.5s steps(40, end), */
-      /* blink-caret .75s step-end infinite; */
-  /* } */ */
 
+
+.text-cursor::after {
+    content: '|';
+    color: black;
+    opacity: 1;
+    animation: blinkTextCursor 1s infinite;
+  }
   
-/* The typing effect */
-/* @keyframes typing { */
-    /* from { width: 0 } */
-    /* to { width: 100% } */
-/* } */
+  .text-cursor.typing::after {
+    animation: none;
+  }
   
-/* The typewriter cursor effect */
-/* @keyframes blink-caret { */
-    /* from, to { border-color: transparent } */
-    /* 50% { border-color: var(--light-blue, #007bff); } */
-/* } */
+  @keyframes blinkTextCursor {
+    0%, 25%, 80%, 100% {
+      opacity: 1;
+    }
+    30%, 75% {
+      opacity: 0;
+    }
+  }
