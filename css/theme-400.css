@@ -9,3 +9,7 @@
 #resume {
     text-align: initial;
 }
+
+ul {
+    padding:revert;
+}

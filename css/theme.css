@@ -282,6 +282,9 @@ section {
     color: var(--light-blue, #007bff);
 }
 
+.hide {
+    visibility: hidden;
+}
 
 footer {
     text-align: center;
@@ -293,17 +296,83 @@ footer {
     color: black;
     opacity: 1;
     animation: blinkTextCursor 1s infinite;
-  }
+}
   
-  .text-cursor.typing::after {
+.text-cursor.typing::after {
     animation: none;
-  }
+}
   
-  @keyframes blinkTextCursor {
+@keyframes blinkTextCursor {
     0%, 25%, 80%, 100% {
-      opacity: 1;
+        opacity: 1;
     }
     30%, 75% {
-      opacity: 0;
+        opacity: 0;
     }
-  }
+}
+
+@-webkit-keyframes blinkTextCursor {
+    0%, 25%, 80%, 100% {
+        opacity: 1;
+    }
+    30%, 75% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        visibility: visible;
+    }
+    100% {
+        opacity: 1;
+    }
+} 
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+        visibility: visible;
+    }
+    100% {opacity: 1;}
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+} 
+
+@-webkit-keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+
+.fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards; 
+ }
+
+ .fadeOut {
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut;
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards; 
+ }
