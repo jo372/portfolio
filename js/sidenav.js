@@ -1,26 +1,26 @@
-var sideNav = document.querySelector('.rightSidePanel');
+let sideNav = document.querySelector('.rightSidePanel');
 if (sideNav) {
-    var listItems = sideNav.querySelectorAll('li');
+    let listItems = sideNav.querySelectorAll('li');
     if (listItems) {
-        listItems.forEach(function (listItem) {
-            var anchorElement = listItem.querySelector('a');
+        listItems.forEach((listItem) => {
+            let anchorElement = listItem.querySelector('a');
             if (anchorElement) {
-                anchorElement.addEventListener('click', function (e) {
+                anchorElement.addEventListener('click', (e) => {
                     e.preventDefault();
                     return false;
                 });
-                var hrefId_1 = anchorElement.hash;
+                let hrefId = anchorElement.hash;
                 listItem.addEventListener('click', function (e) {
                     e.preventDefault();
-                    if (hrefId_1 !== "") {
-                        var el = document.querySelector(hrefId_1);
+                    if (hrefId !== "") {
+                        let el = document.querySelector(hrefId);
                         if (el) {
                             el.scrollIntoView({
                                 behavior: 'smooth',
                                 block: 'start'
                             });
                         }
-                        var previousSelectedElement = sideNav.querySelector('li.active');
+                        let previousSelectedElement = sideNav.querySelector('li.active');
                         if (previousSelectedElement) {
                             previousSelectedElement.classList.toggle('active');
                         }
