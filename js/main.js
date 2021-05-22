@@ -21,12 +21,6 @@ if (body) {
             });
         });
     }
-    /** creating custom video element. */
-    let videoHeader = document.getElementById('video-header');
-    if (videoHeader) {
-        const video = new Video("assets/video/pexels-tea-oebel-6804114.mp4", "assets/img/video-poster.png");
-        videoHeader.append(video.element);
-    }
     /** hiding the socials until word typing has been completed. */
     let socials = document.getElementById('socials');
     if (socials) {
