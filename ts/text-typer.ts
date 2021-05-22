@@ -36,7 +36,6 @@ class TextTyper {
         if (this.stopAnimation) return resolve();
 
         setTimeout( () => {
-            console.log(char);
             this.container.textContent+= char;
             this.stopCursorBlinking();
             resolve();
@@ -58,7 +57,7 @@ class TextTyper {
         }, 200);
     }
 
-    remove(num) {
+    remove(num: number) {
         for( let i = 0; i < num; i++ ) {
         this.removeLetter();
         }
@@ -85,7 +84,7 @@ class TextTyper {
         this.currPromiseChain = this.currPromiseChain.then( callback );
         return this;
     }
-    wait( time ) {
+    wait( time: number ) {
         this.chain( () => new Promise<void>( resolve => {
         if (this.stopAnimation) return resolve();
         setTimeout(resolve, time)

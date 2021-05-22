@@ -26,7 +26,6 @@ class TextTyper {
             if (this.stopAnimation)
                 return resolve();
             setTimeout(() => {
-                console.log(char);
                 this.container.textContent += char;
                 this.stopCursorBlinking();
                 resolve();
