@@ -398,3 +398,32 @@ ul {
     animation-fill-mode: forwards; 
 }
   
+.go-to-top {
+    width:50px;
+    height:50px;
+    position:fixed;
+    bottom:10px;
+    right: 10px;
+    font-size:1.5em;
+    background-color: var(--white, #fff);
+    padding:10px;
+    border-radius:100%;
+    /* border:1px solid var(--light-blue, #007bff); */
+    transition: 0.2s;
+    -o-transition: 0.2s;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    cursor: pointer;
+}
+
+.go-to-top i {
+    position:absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -55%);
+}
+
+.go-to-top:hover {
+    background-color: var(--light-blue, #007bff);
+    color: var(--white, #fff);
+}
