@@ -14,7 +14,7 @@ if(body) {
 
         const typer : TextTyper = new TextTyper(container, 30, 100);
         // minTypingTime?: number, randomTypingTime
-        let htmlString : string = "Hello, I am <span><a href=\"https://www.linkedin.com/in/jordan-o-hara-875b841a9/\" target=\"_blank\">Jordan O'Hara</a></span>. I'm a fulltime Software Engineering Student @ Brighton University";
+        let htmlString : string = "Hello, I am <span><a href=\"https://www.linkedin.com/in/jordan-o-hara-875b841a9/\" target=\"_blank\">Jordan O'Hara</a></span>. A Fulltime Software Engineering Student @ Brighton University";
         // let textToType : string = "Hello, I am Jordan O'Hara. I'm a fulltime Software Engineering Student @ Brighton University";
         
         typer
@@ -23,7 +23,7 @@ if(body) {
         .type("Hi,")
         .remove("Hi,".length)
         .type("Hello, I am Jordan O'Hara.")
-        .type(" I'm a fulltime Software Engineering Student")
+        .type(" A Fulltime Software Engineering Student")
         .type(" @ ")
         .type("Brighton University")
         .stop()
